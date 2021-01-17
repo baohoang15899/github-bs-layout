@@ -353,26 +353,30 @@ a {
     font-style: normal;
     text-align: right;
     margin-bottom: 5px;
-    cursor: zoom-out; }
+    cursor: pointer; }
     .box__icon:hover {
       color: #e2dfdf; }
   .box.box__active {
     opacity: 1;
     visibility: visible; }
-  @media only screen and (max-width: 900px) {
-    .box__next {
-      border-left: solid 14px #afabab;
-      border-bottom: solid 10px transparent;
-      border-top: solid 10px transparent; }
-      .box__next:hover {
-        border-left: solid 14px #e9e4e4; } }
-  @media only screen and (max-width: 900px) {
-    .box__prev {
-      border-right: solid 14px #afabab;
-      border-bottom: solid 10px transparent;
-      border-top: solid 10px transparent; }
-      .box__prev:hover {
-        border-right: solid 14px #e9e4e4; } }
+  .box__next {
+    cursor: pointer; }
+    @media only screen and (max-width: 900px) {
+      .box__next {
+        border-left: solid 14px #afabab;
+        border-bottom: solid 10px transparent;
+        border-top: solid 10px transparent; }
+        .box__next:hover {
+          border-left: solid 14px #e9e4e4; } }
+  .box__prev {
+    cursor: pointer; }
+    @media only screen and (max-width: 900px) {
+      .box__prev {
+        border-right: solid 14px #afabab;
+        border-bottom: solid 10px transparent;
+        border-top: solid 10px transparent; }
+        .box__prev:hover {
+          border-right: solid 14px #e9e4e4; } }
   @media only screen and (max-width: 992px) {
     .box__content {
       margin-left: 5px;

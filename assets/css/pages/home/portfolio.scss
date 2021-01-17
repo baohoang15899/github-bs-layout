@@ -68,7 +68,7 @@
         @include font-customized(18px,#CCC,normal);
         text-align: right;
         margin-bottom: 5px;
-        cursor: zoom-out;
+        cursor: pointer;
         &:hover{
             color:rgb(226, 223, 223);
         }
@@ -78,6 +78,7 @@
         visibility: visible;
     }
     &__next{
+        cursor: pointer;
         @include max-breakpoint(900){
             border-left: solid 14px rgb(175, 171, 171);
             border-bottom: solid 10px transparent;
@@ -88,6 +89,7 @@
         }
     }
     &__prev{
+        cursor: pointer;
         @include max-breakpoint(900){
             border-right: solid 14px rgb(175, 171, 171);
             border-bottom: solid 10px transparent;
