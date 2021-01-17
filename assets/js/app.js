@@ -7,6 +7,7 @@ let nav = document.querySelector(".header__content-nav")
 let mobileBtn = document.querySelector(".header__mobileBtn")
 let section = document.querySelectorAll(".section")
 let body = document.querySelector('body')
+let boxModal = document.querySelector(".box")
 let modalContent = document.querySelector('.modal__content')
 let img = [
     {
@@ -183,7 +184,7 @@ let slide = {
                 document.getElementById('box__img').src = img[counter].src
             }
         })
-        window.addEventListener("click",(event)=>{
+        boxModal.addEventListener("click",(event)=>{
             if (event.target == box){
                 box.classList.remove("box__active")
                 body.classList.remove('body__active')
