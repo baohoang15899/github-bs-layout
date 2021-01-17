@@ -1,0 +1,12 @@
+html,body
+{
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+@import 'settings/index.scss';
+@import 'common/common.scss';
+@import 'layout/index.scss';
+@import 'pages/home/index.scss';
+
+

@@ -1,0 +1,5 @@
+@mixin Line($width:120px,$height:2px,$color:white) {
+    width: $width;
+    height: $height;
+    background-color:$color;
+}

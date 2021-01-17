@@ -1,0 +1,552 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@600&display=swap");
+html, body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; }
+
+/* ====================== 0, SETTINGS ====================== */
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth; }
+
+img {
+  max-width: 100%;
+  display: block; }
+
+li {
+  list-style: none; }
+
+button {
+  cursor: pointer;
+  border: none; }
+
+a {
+  text-decoration: none; }
+
+.wrapper {
+  margin: auto; }
+
+.mr-auto {
+  margin-right: auto; }
+
+.ml-auto {
+  margin-left: auto; }
+
+.mt-50 {
+  margin-top: 50px; }
+
+.mb-48 {
+  margin-bottom: 48px; }
+
+.mLR-9 {
+  margin-left: 9px;
+  margin-right: 9px; }
+
+.mt-20 {
+  margin-top: 20px; }
+
+.center {
+  align-items: center;
+  justify-content: center; }
+
+.scroll__remove {
+  position: fixed;
+  overflow-y: scroll;
+  width: 100%; }
+
+.mg-0 {
+  margin-left: 0;
+  margin-right: 0; }
+
+.mt-48 {
+  margin-top: 48px; }
+
+.fluid {
+  max-width: 1920px; }
+
+.p-0 {
+  padding: 0; }
+
+.pl-pr-0 {
+  padding-left: 0;
+  padding-right: 0; }
+
+.triangle-2 {
+  cursor: pointer;
+  width: 25px;
+  height: 15px;
+  border-right: solid 17px #afabab;
+  border-bottom: solid 13px transparent;
+  border-top: solid 13px transparent;
+  position: absolute;
+  top: 50%;
+  left: 10px; }
+  .triangle-2:hover {
+    border-right: solid 17px #e9e4e4; }
+
+.triangle-3 {
+  cursor: pointer;
+  width: 25px;
+  height: 15px;
+  border-left: solid 17px #afabab;
+  border-bottom: solid 13px transparent;
+  border-top: solid 13px transparent;
+  position: absolute;
+  top: 50%;
+  right: 10px; }
+  .triangle-3:hover {
+    border-left: solid 17px #e9e4e4; }
+
+.body__active {
+  overflow: hidden; }
+
+/* ====================== 1, HEADER ====================== */
+.header {
+  padding: 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all ease-in-out 0.3s;
+  z-index: 2000; }
+  .header.header__active {
+    background-color: white;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
+  .header__mobileBtn {
+    display: none;
+    background-color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.1); }
+    .header__mobileBtn-icon {
+      font-size: 22px;
+      color: #6c757d; }
+  .header__content {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Merriweather Sans", sans-serif; }
+    .header__content-logo {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      margin-right: 16px;
+      font-weight: 700;
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.7);
+      font-style: normal; }
+      .header__content-logo.logo__active {
+        color: #212529; }
+    .header__content-nav {
+      display: flex;
+      align-items: center; }
+    .header__content-link {
+      font-weight: 700;
+      padding-left: 16px;
+      padding-right: 16px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      font-style: normal; }
+      .header__content-link:hover {
+        color: #fffffff5; }
+      .header__content-link.link__active {
+        color: #212529; }
+        .header__content-link.link__active:hover {
+          color: #f4623a; }
+      .header__content-link.highlight__active {
+        color: #f4623a; }
+  @media only screen and (max-width: 992px) {
+    .header {
+      background-color: white; }
+      .header.header__active {
+        background-color: white;
+        box-shadow: transparent; }
+      .header__mobileBtn {
+        display: block; }
+      .header__content {
+        flex-wrap: wrap; }
+        .header__content-logo {
+          color: #212529; }
+        .header__content-nav {
+          max-height: 0vh;
+          overflow: hidden;
+          flex-basis: 100%;
+          flex-direction: column;
+          align-items: flex-start;
+          transition: all ease-in-out 0.5s; }
+          .header__content-nav.nav__active {
+            max-height: 100vh; }
+        .header__content-item {
+          padding-top: 12px;
+          padding-bottom: 12px; }
+        .header__content-link {
+          margin-top: 5px;
+          padding-left: initial;
+          padding-right: initial;
+          color: #6c757d; }
+          .header__content-link:hover {
+            color: #6c757d; } }
+
+/* ====================== 2, FOOTER ====================== */
+.footer {
+  background-color: #f8f9fa; }
+  .footer__content {
+    text-align: center;
+    font-size: 12.8px;
+    color: #6c757d;
+    font-style: normal;
+    font-weight: 400;
+    font-family: "Merriweather", serif;
+    padding-top: 48px;
+    padding-bottom: 48px; }
+
+/* ====================== 3, BANNER ====================== */
+.banner {
+  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url(../img/bg-masthead.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+  .banner__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 231px;
+    padding-bottom: 179px; }
+    .banner__content-title {
+      font-size: 56px;
+      color: white;
+      font-style: normal;
+      line-height: 67px;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-family: "Merriweather Sans", sans-serif;
+      margin-bottom: 8px; }
+    .banner__content-description {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.7);
+      font-style: normal;
+      font-weight: 300;
+      line-height: 28px;
+      font-family: "Merriweather", serif;
+      max-width: 64%;
+      margin-bottom: 48px; }
+    .banner__content-line {
+      margin: 24px auto;
+      width: 52px;
+      height: 4px;
+      background-color: #f4623a; }
+    .banner__content-btn {
+      padding: 20px 36px;
+      background-color: #f4623a;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-family: "Merriweather Sans", sans-serif;
+      font-size: 14px;
+      color: white;
+      font-style: normal;
+      border-radius: 160px;
+      transition: all ease-in-out 0.2s; }
+      .banner__content-btn:hover {
+        background-color: #e64518; }
+      .banner__content-btn:focus {
+        outline: 0;
+        background-color: #eb471a;
+        box-shadow: 0 0 0 0.2rem rgba(244, 98, 58, 0.6); }
+  @media only screen and (max-width: 1200px) {
+    .banner__content-title {
+      font-size: 48px;
+      line-height: 58px;
+      max-width: 83%; } }
+  @media only screen and (max-width: 992px) {
+    .banner__content {
+      padding-top: 160px;
+      padding-bottom: 88px; }
+      .banner__content-title {
+        font-size: 36px;
+        line-height: 43px;
+        max-width: 100%; }
+      .banner__content-description {
+        font-size: 16px;
+        line-height: 24px;
+        max-width: 100%; } }
+
+/* ====================== 6, PORTFOLIO ====================== */
+.portfolio__gallery {
+  cursor: pointer;
+  position: relative; }
+  .portfolio__gallery:hover .portfolio__overlay {
+    opacity: 1;
+    visibility: visible; }
+.portfolio__overlay {
+  transition: all ease-in-out 0.3s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(244, 98, 58, 0.9);
+  top: 0;
+  left: 0;
+  z-index: 500;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  .portfolio__overlay-title {
+    line-height: 20.4px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Merriweather Sans", sans-serif;
+    font-size: 13.6px;
+    color: rgba(255, 255, 255, 0.5);
+    font-style: normal; }
+  .portfolio__overlay-name {
+    font-size: 19.2px;
+    color: white;
+    font-style: normal;
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    line-height: 28.8px;
+    text-align: center; }
+
+.box {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2042;
+  overflow: hidden;
+  position: fixed;
+  background-color: rgba(11, 11, 11, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  cursor: zoom-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  .box__img {
+    cursor: pointer; }
+  .box__text {
+    margin-top: 5px;
+    justify-content: flex-end;
+    display: flex;
+    font-size: 12px;
+    color: #CCC;
+    font-style: normal;
+    font-family: "Merriweather", serif;
+    font-weight: 400; }
+    .box__text-index {
+      margin-right: 3px; }
+  .box__icon {
+    font-size: 18px;
+    color: #CCC;
+    font-style: normal;
+    text-align: right;
+    margin-bottom: 5px;
+    cursor: zoom-out; }
+    .box__icon:hover {
+      color: #e2dfdf; }
+  .box.box__active {
+    opacity: 1;
+    visibility: visible; }
+  @media only screen and (max-width: 900px) {
+    .box__next {
+      border-left: solid 14px #afabab;
+      border-bottom: solid 10px transparent;
+      border-top: solid 10px transparent; }
+      .box__next:hover {
+        border-left: solid 14px #e9e4e4; } }
+  @media only screen and (max-width: 900px) {
+    .box__prev {
+      border-right: solid 14px #afabab;
+      border-bottom: solid 10px transparent;
+      border-top: solid 10px transparent; }
+      .box__prev:hover {
+        border-right: solid 14px #e9e4e4; } }
+  @media only screen and (max-width: 992px) {
+    .box__content {
+      margin-left: 5px;
+      margin-right: 5px; } }
+
+/* ====================== 4, ABOUT ====================== */
+.about, .services {
+  background-color: #f4623a; }
+  .about__content, .services__content {
+    padding-top: 128px;
+    padding-bottom: 128px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center; }
+    .about__content-line, .services__content-line {
+      width: 52px;
+      height: 4px;
+      background-color: white;
+      margin: 24px auto; }
+    .about__content-description {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.5);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      font-family: "Merriweather", serif;
+      max-width: 66%;
+      margin-bottom: 24px; }
+    .about__content-btn {
+      padding: 20px  36px;
+      font-size: 14px;
+      color: #212529;
+      font-style: normal;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 700;
+      background-color: white;
+      border-radius: 160px;
+      text-transform: uppercase;
+      transition: all ease-in-out 0.2s; }
+      .about__content-btn:hover {
+        background-color: #e9e1e1; }
+      .about__content-btn:focus {
+        outline: 0;
+        background-color: #e9e1e1;
+        box-shadow: 0 0 0 0.2rem rgba(216, 217, 219, 0.5); }
+    .about__content-title, .services__content-title {
+      font-size: 32px;
+      color: white;
+      font-style: normal;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 500;
+      line-height: 38px; }
+  @media only screen and (max-width: 992px) {
+    .about__content-description {
+      font-size: 16px;
+      line-height: 24px;
+      max-width: 100%; } }
+
+/* ====================== 5, SERVICES ====================== */
+.services {
+  background-color: white; }
+  .services__content-line {
+    background-color: #f4623a; }
+  .services__content-title {
+    color: #212529; }
+  .services__section {
+    margin-top: 48px; }
+    .services__section-icon {
+      font-size: 64px;
+      color: #f4623a;
+      font-style: normal;
+      line-height: 96px;
+      margin-bottom: 24px; }
+    .services__section-title {
+      margin-bottom: 8px;
+      font-family: "Merriweather Sans", sans-serif;
+      font-size: 24px;
+      color: #212529;
+      font-style: normal;
+      line-height: 29px;
+      font-weight: 500; }
+    .services__section-description {
+      font-size: 16px;
+      color: #6c757d;
+      font-style: normal;
+      line-height: 24px;
+      font-family: "Merriweather", serif;
+      font-weight: 400; }
+
+/* ====================== 7, DOWNLOAD ====================== */
+.download {
+  background-color: #343a40; }
+  .download__content {
+    padding-top: 178px;
+    padding-bottom: 178px;
+    text-align: center; }
+    .download__content-title {
+      margin-bottom: 44px;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 500;
+      font-size: 32px;
+      color: white;
+      font-style: normal;
+      line-height: 38.4px; }
+    .download__content-btn {
+      padding: 20px 36px;
+      background-color: white;
+      font-size: 13.6px;
+      color: #212529;
+      font-style: normal;
+      line-height: 20.4px;
+      font-family: "Merriweather Sans", sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      border-radius: 160px;
+      transition: all ease-in-out 0.2s; }
+      .download__content-btn:hover {
+        background-color: #dbe1e6; }
+      .download__content-btn:focus {
+        outline: 0;
+        background-color: #e9e1e1;
+        box-shadow: 0 0 0 0.2rem rgba(216, 217, 219, 0.5); }
+
+/* ====================== 8, CONTACT ====================== */
+.contact__content {
+  padding-top: 178px;
+  padding-bottom: 178px; }
+  .contact__content-title {
+    text-align: center;
+    font-size: 32px;
+    color: #212529;
+    font-style: normal;
+    line-height: 38.4px;
+    font-family: "Merriweather Sans", sans-serif;
+    font-weight: 500; }
+  .contact__content-description {
+    text-align: center;
+    font-size: 16px;
+    color: #6c757d;
+    font-style: normal;
+    font-family: "Merriweather", serif;
+    line-height: 24px;
+    font-weight: 400; }
+  .contact__content-line {
+    width: 52px;
+    height: 4px;
+    background-color: #f4623a;
+    margin: 24px auto; }
+.contact__address {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  .contact__address-icon {
+    font-size: 48px;
+    color: #6c757d;
+    font-style: normal;
+    margin-bottom: 16px; }
+  .contact__address-mail, .contact__address-number {
+    font-size: 16px;
+    color: #f4623a;
+    font-style: normal;
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    line-height: 24px; }
+    .contact__address-mail:hover, .contact__address-number:hover {
+      text-decoration: underline; }
+  .contact__address-number {
+    color: #212529; }
+    .contact__address-number:hover {
+      text-decoration: none; }
+
+/* ====================== 7, COPYRIGHT ====================== */
+
+/*# sourceMappingURL=main.css.map */

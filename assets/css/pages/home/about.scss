@@ -1,0 +1,54 @@
+/* ====================== 4, ABOUT ====================== */
+.about{
+    background-color: $color-orange;
+    &__content{
+        @include paddingTopBot(128px,128px);
+        @include flex-center(column);
+        text-align: center;
+        &-line{
+            @include Line(52px,4px,white);
+            margin: 24px auto;
+        }
+        &-description{
+            @include font-customized(16px,$color-greyLight,normal);
+            font-weight: 400;
+            line-height: 24px;
+            font-family: $fontMerri;
+            max-width: 66%;
+            margin-bottom: 24px;
+        }
+        &-btn{
+            padding: 20px  36px;
+            @include font-customized(14px,$color-black,normal);
+            font-family: $fontMerriSan;
+            font-weight: 700;
+            background-color: white;
+            border-radius: 160px;
+            text-transform: uppercase;
+            transition: all ease-in-out 0.2s;
+            &:hover{
+                background-color:rgb(233, 225, 225) ;
+            }
+            &:focus{
+                outline: 0;
+                background-color: rgb(233, 225, 225);
+                box-shadow: 0 0 0 0.2rem rgba(216, 217, 219, 0.5);
+            }
+        }
+        &-title{
+            @include font-customized(32px,white,normal);
+            font-family: $fontMerriSan;
+            font-weight: 500;
+            line-height: 38px;
+        }
+    }
+    @include max-breakpoint(992){
+        &__content{
+            &-description{
+                font-size: 16px;
+                line-height: 24px;
+                max-width: 100%;
+            }
+        }
+    }
+}

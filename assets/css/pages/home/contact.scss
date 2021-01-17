@@ -1,0 +1,47 @@
+/* ====================== 8, CONTACT ====================== */
+.contact{
+    &__content{
+        @include paddingTopBot(178px,178px);
+        &-title{
+            text-align: center;
+            @include font-customized(32px,$color-black,normal);
+            line-height: 38.4px;
+            font-family: $fontMerriSan;
+            font-weight: 500;
+        }
+        &-description{
+            text-align: center;
+            @include font-customized(16px,$color-muted,normal);
+            font-family: $fontMerri;
+            line-height: 24px;
+            font-weight: 400;
+        }
+        &-line{
+            @include Line(52px,4px,$color-orange);
+            margin: 24px auto;
+        }
+    }
+    &__address{
+        @include flex-center(column);
+        &-icon{
+            @include font-customized(48px,$color-muted,normal);
+            margin-bottom: 16px;
+        }
+        &-mail{
+            @include font-customized(16px,$color-orange,normal);
+            font-family: $fontMerri;
+            font-weight: 400;
+            line-height: 24px;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+        &-number{
+            @extend .contact__address-mail;
+            color: $color-black;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
+}

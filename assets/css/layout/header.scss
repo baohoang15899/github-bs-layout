@@ -1,0 +1,100 @@
+/* ====================== 1, HEADER ====================== */
+.header{
+    padding: 16px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all ease-in-out 0.3s;
+    z-index: 2000;
+    &.header__active{
+        background-color: white;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
+    &__mobileBtn{
+        display: none;
+        background-color: white;
+        padding: 4px 12px;
+        border-radius: 4px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        &-icon{
+            font-size: 22px;
+            color: $color-muted;
+        }
+    }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        font-family: $fontMerriSan;
+        &-logo{
+            @include paddingTopBot(5px,5px);
+            margin-right: 16px;
+            font-weight: 700;
+            @include font-customized(20px,$color-grey,normal);
+            &.logo__active{
+                color: $color-black;
+            }
+        }
+        &-nav{
+            display: flex;
+            align-items: center;
+        }
+        &-link{
+            font-weight: 700;
+            padding-left: 16px;
+            padding-right: 16px;
+            @include font-customized(14px,$color-grey,normal);
+            &:hover{
+                color: #fffffff5;
+            }
+            &.link__active{
+                color: $color-black;
+                &:hover{
+                    color: $color-orange;
+                }
+            }
+            &.highlight__active{
+                color: $color-orange;
+            }
+        }
+    }
+    @include max-breakpoint(992){
+        background-color: white;
+        &.header__active{
+            background-color: white;
+            box-shadow: transparent;
+        }
+        &__mobileBtn{
+            display: block;
+        }
+        &__content{
+            flex-wrap: wrap;
+            &-logo{
+                color: $color-black;
+            }
+            &-nav{
+                max-height: 0vh;
+                overflow: hidden;
+                flex-basis: 100%;
+                flex-direction: column;
+                align-items: flex-start;
+                transition: all ease-in-out 0.5s;
+                &.nav__active{
+                    max-height: 100vh;
+                }
+            }
+            &-item{
+                @include paddingTopBot(12px,12px);
+            }
+            &-link{
+                margin-top: 5px;
+                padding-left: initial;
+                padding-right: initial;
+                color: $color-muted;
+                &:hover{
+                    color:$color-muted ;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+/* ====================== 5, SERVICES ====================== */
+.services{
+    @extend .about;
+    background-color: white;
+    &__content{
+        @extend .about__content;
+        &-line{
+            @extend .about__content-line;
+            background-color: $color-orange;
+        }
+        &-title{
+            @extend .about__content-title;
+            color: $color-black;
+        }
+    }
+    &__section{
+        margin-top: 48px;
+        &-icon{
+            @include font-customized (64px,$color-orange,normal);
+            line-height: 96px;
+            margin-bottom: 24px;
+        }
+        &-title{
+            margin-bottom: 8px;
+            font-family: $fontMerriSan;
+            @include font-customized (24px,$color-black,normal);
+            line-height: 29px;
+            font-weight: 500;
+        }
+        &-description{
+            @include font-customized (16px,$color-muted,normal);
+            line-height: 24px;
+            font-family: $fontMerri;
+            font-weight: 400;
+        }
+    }
+}

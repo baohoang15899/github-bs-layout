@@ -1,0 +1,74 @@
+/* ====================== 3, BANNER ====================== */
+.banner{
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url(../img/bg-masthead.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &__content{
+        @include flex-center(column);
+        text-align: center;
+        @include paddingTopBot(231px,179px);
+        &-title{
+            @include font-customized(56px,white,normal);
+            line-height: 67px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-family: $fontMerriSan;
+            margin-bottom: 8px;
+        }
+        &-description{
+            @include font-customized(18px,$color-grey,normal);
+            font-weight: 300;
+            line-height: 28px;
+            font-family: $fontMerri;
+            max-width: 64%;
+            margin-bottom: 48px;
+        }
+        &-line{
+            margin: 24px auto;
+            @include Line(52px,4px,$color-orange)
+        }
+        &-btn{
+            padding: 20px 36px;
+            background-color: $color-orange;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-family: $fontMerriSan;
+            @include font-customized(14px,white,normal);
+            border-radius: 160px;
+            transition: all ease-in-out 0.2s;
+            &:hover{
+                background-color: #e64518;
+            }
+            &:focus{
+                outline: 0;
+                background-color: #eb471a;
+                box-shadow: 0 0 0 0.2rem rgba($color:$color-orange, $alpha: 0.6);
+            }
+        }
+    }
+    @include max-breakpoint(1200){
+        &__content{
+            &-title{
+                font-size: 48px;
+                line-height: 58px;
+                max-width: 83%;
+            }
+        }
+    }
+    @include max-breakpoint(992){
+        &__content{
+            @include paddingTopBot(160px,88px);
+            &-title{
+                font-size: 36px;
+                line-height: 43px;
+                max-width: 100%;
+            }
+            &-description{
+                font-size: 16px;
+                line-height: 24px;
+                max-width: 100%;
+            }
+        }
+    }
+}

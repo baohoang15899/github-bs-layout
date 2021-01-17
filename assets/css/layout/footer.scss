@@ -1,0 +1,11 @@
+/* ====================== 2, FOOTER ====================== */
+.footer{
+    background-color: rgb(248, 249, 250);
+    &__content{
+        text-align: center;
+        @include font-customized(12.8px,$color-muted,normal);
+        font-weight: 400;
+        font-family: $fontMerri;
+        @include paddingTopBot(48px,48px);
+    }
+}

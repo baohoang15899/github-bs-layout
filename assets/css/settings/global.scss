@@ -1,0 +1,107 @@
+/* ====================== 0, SETTINGS ====================== */
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+li{
+    list-style: none;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+}
+
+a{
+    text-decoration: none;
+}
+.wrapper{
+    margin: auto;
+}
+.mr-auto{
+    margin-right: auto;
+}
+.ml-auto{
+    margin-left: auto;
+}
+.mt-50{
+    margin-top: 50px;
+}
+.mb-48{
+    margin-bottom: 48px;
+}
+.mLR-9{
+    margin-left: 9px;
+    margin-right: 9px;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.center{
+    align-items: center;
+    justify-content: center;
+}
+.scroll__remove{
+    position: fixed; 
+    overflow-y: scroll;
+    width: 100%;
+}
+.mg-0{
+    margin-left: 0;
+    margin-right: 0;
+}
+.mt-48{
+    margin-top: 48px;
+}
+.fluid{
+    max-width: 1920px;
+}
+.p-0{
+    padding: 0;
+}
+.pl-pr-0{
+    padding-left: 0;
+    padding-right: 0;
+}
+.triangle-2 {
+    cursor: pointer;
+    width: 25px;
+    height: 15px;
+    border-right: solid 17px  rgb(175, 171, 171);
+    border-bottom: solid 13px transparent;
+    border-top: solid 13px transparent;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    &:hover{
+        border-right: solid 17px  rgb(233, 228, 228);
+    }
+  }
+  .triangle-3 {
+    cursor: pointer;
+    width: 25px;
+    height: 15px;
+    border-left: solid 17px rgb(175, 171, 171);
+    border-bottom: solid 13px transparent;
+    border-top: solid 13px transparent;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    &:hover{
+        border-left: solid 17px  rgb(233, 228, 228);
+    }
+  }
+
+  .body__active{
+      overflow: hidden;
+  }
